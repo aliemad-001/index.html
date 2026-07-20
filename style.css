@@ -1,4 +1,4 @@
-/* Core Layout */
+/* Core Layout Setup */
 body {
     background-color: #0d0e12; /* Deep obsidian black */
     color: #cbd5e1;            /* Clean, muted light gray text */
@@ -19,7 +19,7 @@ header {
     align-items: center;
     border-bottom: 1px solid #1e293b;
     padding-bottom: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .logo {
@@ -36,14 +36,50 @@ nav a {
 }
 
 nav a:hover {
-    color: #00f0ff; /* Cyan glow on hover */
+    color: #00f0ff; 
+}
+
+/* Terminal Blinking Cursor Effect */
+.blink-cursor {
+    color: #00f0ff;
+    font-weight: bold;
+    animation: blinker 1.2s linear infinite;
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+/* System Broadcast Ticker */
+.ticker-wrap {
+    width: 100%;
+    max-width: 650px;
+    overflow: hidden; 
+    border: 1px dashed #1e293b;
+    padding: 8px 0;
+    margin-bottom: 45px;
+    background-color: #0d0e12;
+}
+
+.ticker-content {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    color: #94a3b8;
+    letter-spacing: 2px;
+    animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translate3d(100%, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
 }
 
 /* Content Blocks */
 .terminal-block {
     width: 100%;
     max-width: 650px;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
 }
 
 h2 {
@@ -53,17 +89,77 @@ h2 {
     letter-spacing: 1px;
 }
 
-p, li {
+p {
     font-size: 0.95rem;
     line-height: 1.6;
 }
 
-ul {
-    padding-left: 20px;
-    margin-top: 10px;
+/* System Comms Link Styling */
+#contact a {
+    color: #00f0ff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-li {
-    margin-bottom: 5px;
-    list-style-type: square;
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Project Directory Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; 
+    margin-top: 20px;
+}
+
+/* 3D Tactile Project Cards */
+.project-file {
+    border: 2px solid #e2e8f0;   
+    padding: 20px;
+    background-color: #111319;   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 5px 5px 0px #00f0ff; /* Solid neon blueprint offset shadow */
+    transition: all 0.2s ease;
+}
+
+.project-file:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #00f0ff; 
+    border-color: #00f0ff;          
+}
+
+.file-preview {
+    background-color: #0d0e12;
+    border: 1px dashed #1e293b;
+    color: #94a3b8;
+    padding: 25px 10px;
+    text-align: center;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.project-file h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    color: #e2e8f0;
+}
+
+.project-file p {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin: 0 0 20px 0;
+}
+
+.project-file a {
+    color: #00f0ff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.project-file a:hover {
+    text-decoration: underline;
 }

@@ -3,76 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NODE // MAIN</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Ali Emad | Builder, Learner, Problem Solver</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    
+    <canvas id="particles"></canvas>
+    <div class="glow-orb top-left"></div>
+    <div class="glow-orb bottom-right"></div>
 
-    <header>
-        <div class="logo">STATUS: ONLINE<span class="blink-cursor">_</span></div>
-        <nav>
-            <a href="#about">/about</a>
-            <a href="#projects">/projects</a>
-            <a href="#contact">/contact</a>
-        </nav>
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo-mark">&lt;/&gt;</span>
+                <div class="brand-text">
+                    <span class="name">Ali Emad</span>
+                    <span class="subtitle">Builder • Learner • Problem Solver</span>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#learnings">Learnings</a>
+                <a href="#thoughts">Thoughts</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <a href="#contact" class="btn btn-outline">Let's Connect</a>
+            
+            <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <header id="home" class="hero section-padding">
+        <div class="container hero-grid">
+            <div class="hero-content animate-on-scroll">
+                <h1 class="hero-title">Turning <span class="gradient-text">curiosity</span> into <span class="gradient-text">projects.</span></h1>
+                <p class="hero-desc">I'm Ali Emad, a student who enjoys mathematics, technology, analytical thinking, and figuring out how things work. I spend my time learning, building, and exploring new ideas.</p>
+                
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View Projects <i class="fas fa-arrow-right"></i></a>
+                    <a href="#thoughts" class="btn btn-glass"><i class="fas fa-book-open"></i> Read My Notes</a>
+                </div>
+                
+                <div class="hero-status">
+                    <span class="status-item"><i class="fas fa-map-marker-alt" style="color: var(--blue);"></i> Pakistan</span>
+                    <span class="status-item"><div class="pulse-dot"></div> Always Learning</span>
+                </div>
+            </div>
+            
+            <div class="hero-visual animate-on-scroll delay-1">
+                <div class="abstract-composition">
+                    <div class="code-block glass-card">
+                        <code>const future = build();<br>if(curious) {<br>&nbsp;&nbsp;learn();<br>}</code>
+                    </div>
+                    <div class="math-symbol s1">π</div>
+                    <div class="math-symbol s2">∑</div>
+                    <div class="math-symbol s3">∫</div>
+                    <div class="math-symbol s4">f(x)</div>
+                    <div class="math-symbol s5">AI</div>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <div class="ticker-wrap">
-        <div class="ticker-content">
-            // BOOT LOG: SYSTEM ONLINE // LOGGING STARDANCE DEV CYCLES // REPOS UPDATING LIVE // NO COOKIES NO TRACKING // STAY CREATIVE //
-        </div>
-    </div>
-
-    <main>
-        
-        <section id="about" class="terminal-block">
-            <h2>01 // PROFILE</h2>
-            <p>Developer and builder. Currently logging development cycles for the Stardance project. Focused on creating clean, functional web layouts from scratch.</p>
-        </section>
-
-        <section id="projects" class="terminal-block">
-            <h2>02 // THE_FILES</h2>
-            <p>Active Repository Directory:</p>
-            
-            <div class="project-grid">
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text glass-card animate-on-scroll">
+                    <h2 class="section-title">About Me</h2>
+                    <p>I spend a lot of time exploring ideas, asking questions, and learning through experimentation. Whether it's solving a difficult problem, understanding a new concept, or building something useful, I'm always looking for the next challenge.</p>
+                    <div class="signature">Ali Emad</div>
+                </div>
                 
-                <div class="project-file">
-                    <div class="file-preview">[stardance_log.sys]</div>
-                    <h3>Stardance Log</h3>
-                    <p>Live development tracking node.</p>
-                    <a href="https://stardance.hackclub.com/projects/37563" target="_blank">/open_link</a>
+                <div class="stats-grid animate-on-scroll delay-1">
+                    <div class="stat-card glass-card">
+                        <i class="fas fa-code icon-blue"></i>
+                        <h3>12+</h3>
+                        <p>Projects</p>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <i class="fas fa-book-reader icon-purple"></i>
+                        <h3>1000+</h3>
+                        <p>Hours Learning</p>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <i class="fas fa-fire icon-orange"></i>
+                        <h3>∞</h3>
+                        <p>Curiosity</p>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <i class="fas fa-trophy icon-yellow"></i>
+                        <h3>Big</h3>
+                        <p>Goals Ahead</p>
+                    </div>
                 </div>
-
-                <div class="project-file">
-                    <div class="file-preview">[tasko_bot.exe]</div>
-                    <h3>tasko-bot</h3>
-                    <p>Productivity sidekick for Slack workflows.</p>
-                    <a href="https://github.com/TakableDawn3067/tasko-bot" target="_blank">/open_link</a>
-                </div>
-
-                <div class="project-file">
-                    <div class="file-preview">[orbit_os.bin]</div>
-                    <h3>OrbitOS</h3>
-                    <p>Custom system architecture build.</p>
-                    <a href="https://github.com/TakableDawn3067/OrbitOS" target="_blank">/open_link</a>
-                </div>
-
-                <div class="project-file">
-                    <div class="file-preview">[astrorush.pkg]</div>
-                    <h3>astrorush-game</h3>
-                    <p>Active game development space.</p>
-                    <a href="https://github.com/TakableDawn3067/astrorush-game" target="_blank">/open_link</a>
-                </div>
-
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact" class="terminal-block">
-            <h2>03 // COMMS</h2>
-            <p>Reach out via <a href="https://github.com/TakableDawn3067" target="_blank">GitHub</a> or locate my node online.</p>
-        </section>
-        
-    </main>
+    <section id="learnings" class="section-padding">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Things I'm Learning</h2>
+                <p class="section-subtitle">Always growing. Always building.</p>
+            </div>
+            
+            <div class="learning-grid animate-on-scroll">
+                <div class="learning-card glass-card">
+                    <div class="icon-wrapper blue"><i class="fa-solid fa-square-root-variable"></i></div>
+                    <h3>Mathematics</h3>
+                    <p>The foundation of everything.</p>
+                </div>
+                <div class="learning-card glass-card">
+                    <div class="icon-wrapper purple"><i class="fas fa-brain"></i></div>
+                    <h3>Technology & AI</h3>
+                    <p>Building a better tomorrow.</p>
+                </div>
+                <div class="learning-card glass-card">
+                    <div class="icon-wrapper green"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Programming</h3>
+                    <p>Turning ideas into solutions.</p>
+                </div>
+                <div class="learning-card glass-card">
+                    <div class="icon-wrapper yellow"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Problem Solving</h3>
+                    <p>Thinking deeper, solving smarter.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-subtitle">Ideas in progress. Solutions in the making.</p>
+            </div>
+            
+            <div class="project-grid animate-on-scroll">
+                <div class="project-card glass-card">
+                    <div class="project-img placeholder-bg-1"></div>
+                    <div class="project-content">
+                        <h3>Study Tracker</h3>
+                        <p>A productivity-focused application for tracking study sessions and learning goals.</p>
+                        <div class="tags">
+                            <span>Next.js</span><span>TypeScript</span><span>Tailwind</span>
+                        </div>
+                        <a href="#" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="project-card glass-card">
+                    <div class="project-img placeholder-bg-2"></div>
+                    <div class="project-content">
+                        <h3>Math Notes Hub</h3>
+                        <p>A digital library of mathematical notes, concepts, and problem solutions.</p>
+                        <div class="tags">
+                            <span>LaTeX</span><span>Markdown</span>
+                        </div>
+                        <a href="#" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-img placeholder-bg-3"></div>
+                    <div class="project-content">
+                        <h3>Idea Vault</h3>
+                        <p>A collection of startup ideas, experiments, and future products.</p>
+                        <div class="tags">
+                            <span>Notes</span><span>Brainstorming</span>
+                        </div>
+                        <a href="#" class="btn-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-img placeholder-bg-4"></div>
+                    <div class="project-content">
+                        <h3>Coming Soon</h3>
+                        <p>More ambitious projects currently in development.</p>
+                        <div class="tags">
+                            <span class="tag-outline">In Progress</span>
+                        </div>
+                        <a href="#" class="btn-link disabled">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="thoughts" class="section-padding">
+        <div class="container">
+            <div class="section-header flex-between animate-on-scroll">
+                <div>
+                    <h2 class="section-title">Thought Library</h2>
+                    <p class="section-subtitle">Ideas today. Wisdom tomorrow.</p>
+                </div>
+                <a href="#" class="btn btn-glass">Explore Notes <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="thought-grid animate-on-scroll">
+                <article class="thought-card glass-card">
+                    <h3>Building Discipline</h3>
+                    <p>Small, consistent actions create massive results.</p>
+                    <span class="date">May 20, 2024</span>
+                </article>
+                <article class="thought-card glass-card">
+                    <h3>Why I Love Math</h3>
+                    <p>It's not just numbers. It's patterns, beauty, and endless possibilities.</p>
+                    <span class="date">May 18, 2024</span>
+                </article>
+                <article class="thought-card glass-card">
+                    <h3>Lessons From Problems</h3>
+                    <p>Every difficult problem teaches more than a solved one.</p>
+                    <span class="date">May 15, 2024</span>
+                </article>
+                <article class="thought-card glass-card">
+                    <h3>The Future I'm Building</h3>
+                    <p>Big goals. Better habits. Stronger mind. Brighter future.</p>
+                    <span class="date">May 12, 2024</span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="cta-box glass-card animate-on-scroll">
+                <div class="cta-content">
+                    <h2 class="section-title">Let's create something <span class="gradient-text">amazing.</span></h2>
+                    <p>I'd love to connect, collaborate, and discuss ideas.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-glass"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="#" class="btn btn-glass"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="#" class="btn btn-primary"><i class="fas fa-envelope"></i> Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2>Stay curious. Build things.<br>Keep learning. <span style="color: var(--blue);">✦</span></h2>
+                </div>
+                <div class="footer-links-group">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <a href="#home">Home</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#learnings">Learnings</a>
+                        <a href="#thoughts">Thoughts</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Made for the journey</h4>
+                        <p class="footer-text">This website is a reflection of the ideas I'm exploring and the future I'm building.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ali Emad. Keep building. 🤍</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

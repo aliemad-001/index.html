@@ -1,0 +1,69 @@
+/* Core Layout */
+body {
+    background-color: #0d0e12; /* Deep obsidian black */
+    color: #cbd5e1;            /* Clean, muted light gray text */
+    font-family: 'Courier New', Courier, monospace; /* Classic retro terminal font */
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header & Navigation */
+header {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.logo {
+    font-weight: bold;
+    color: #00f0ff; /* Sharp cyan accent */
+    font-size: 0.9rem;
+}
+
+nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.9rem;
+}
+
+nav a:hover {
+    color: #00f0ff; /* Cyan glow on hover */
+}
+
+/* Content Blocks */
+.terminal-block {
+    width: 100%;
+    max-width: 650px;
+    margin-bottom: 35px;
+}
+
+h2 {
+    color: #00f0ff;
+    font-size: 1.1rem;
+    margin-top: 0;
+    letter-spacing: 1px;
+}
+
+p, li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+li {
+    margin-bottom: 5px;
+    list-style-type: square;
+}
